@@ -1,4 +1,4 @@
-const poemStyle = ""
+const poemStyle = "font-ar text-sm"
 
 const poems = [
   {
@@ -106,10 +106,8 @@ const poems = [
       And I’ve received my currency  <br />
       When I return, I’m more clever <br />
       For I’ve learned how to earn a lover  <br />
-      I spread my fingers,  <br />
-      But nothing lingers <br />
-      She Walks in Beauty,  <br />
-      I walk in vain
+      I spread my fingers,       But nothing lingers <br />
+      She Walks in Beauty,       I walk in vain
     </p>,
     lang: "en"
   }

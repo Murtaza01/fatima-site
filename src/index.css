@@ -1,20 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Scheherazade+New:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
 
-.logo-font {
-  font-family: "Charm", cursive;
-  font-weight: 700;
-  font-style: normal;
+
+
+@theme {
+  --font-logo: "Charm", cursive;
+  --font-main: "Cormorant Garamond", serif;
+  --font-ar: "Scheherazade New", serif;
 }
 
 
-.main-font {
-  font-family: "Cormorant Garamond", serif;
-  font-optical-sizing: auto;
-}
 
 .bg-hero {
   background-image: url(./assets/images/xv.png);
   background-color: #013f29;
 }
-
