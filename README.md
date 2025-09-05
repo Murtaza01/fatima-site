@@ -1,3 +1,8 @@
+This site is a gift to a beautiful person.
+
+You can view the live version here:
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

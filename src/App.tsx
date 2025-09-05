@@ -1,16 +1,20 @@
-import Paper from "./components/Paper"
-import SliderPapers from "./components/SliderPapers"
+import Hero from "./layout/Hero"
+import PaperSlider from "./components/PaperSlider"
+import Nav from "./layout/Nav"
+import Footer from "./layout/Footer"
+import SkillCard from "./components/SkillCard"
 
 function App() {
 
-  return <div className="bg-neutral-800 pb-10">
-    <div className="bg-hero text-white px-8 py-24  flex flex-col gap-3 h-dvh">
-      <span className="font-logo text-amber-300 text-4xl absolute left-0 top-0  px-3 py-1">Fat.</span>
-      <h1 className="text-5xl font-main italic font-bold">The Fatima</h1>
-      <p className="pl-1 font-main">Everything you need to know about me, and more.</p>
-
+  return <div className="bg-hero text-white ">
+    <Nav />
+    <Hero />
+    <h2 className=" px-10 my-20 
+      font-main text-4xl">My Skills</h2>
+    <div className="flex justify-center py-10">
+          <SkillCard />
     </div>
-    <SliderPapers />
+    <Footer />
   </div>
 
 }
