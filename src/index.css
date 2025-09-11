@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Scheherazade+New:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Mirza:wght@400;500;600;700&family=Ruwudu:wght@400;500;600;700&family=Scheherazade+New:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 
@@ -6,6 +6,8 @@
   --font-logo: "Charm", cursive;
   --font-main: "Cormorant Garamond", serif;
   --font-ar: "Scheherazade New", serif;
+  --font-head-ar: "Ruwudu", serif;
+  --font-sub-ar: "Mirza", serif;
   --color-accent: var(--color-rose-400)
 }
 
@@ -13,7 +15,7 @@
 
 
 .bg-hero {
-  background-image: url(./assets/images/xv.png);
+  background-image: url(./assets/images/birds.png);
   background-color: var(--color-emerald-900);
 }
 
@@ -27,4 +29,17 @@
   width: 80%;
   height: 30%;
   background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255) 90%);
+}
+
+.nav-animate {
+  transition: height 1s ease, opacity 0.5s ease;
+  height: 12rem;
+  opacity: 1;
+}
+
+@starting-style {
+  .nav-animate {
+    opacity: 0;
+    height: 0;
+  }
 }

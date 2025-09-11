@@ -1,6 +1,8 @@
+import type { ReactNode } from "react";
+
 interface props {
-  title: string;
-  poem: string;
+  title: ReactNode;
+  poem: ReactNode;
   lang: string;
 }
 

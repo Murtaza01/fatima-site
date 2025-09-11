@@ -1,19 +1,22 @@
 import Hero from "./layout/Hero"
-import PaperSlider from "./components/PaperSlider"
 import Nav from "./layout/Nav"
 import Footer from "./layout/Footer"
-import SkillCard from "./components/SkillCard"
+import Skills from "./layout/Skills"
+import Books from "./layout/Books"
+import Heading from "./components/Heading"
+import PaperSlider from "./components/PaperSlider"
 
 function App() {
 
   return <div className="bg-hero text-white ">
     <Nav />
     <Hero />
-    <h2 className=" px-10 my-20 
-      font-main text-4xl">My Skills</h2>
-    <div className="flex justify-center py-10">
-          <SkillCard />
-    </div>
+    <Heading>أنه:</Heading>
+    <Skills />
+    <Heading>قصائدي</Heading>
+    <PaperSlider />
+    <Heading>كتبي المفضلة</Heading>
+    <Books />
     <Footer />
   </div>
 

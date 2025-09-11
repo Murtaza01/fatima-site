@@ -1,13 +1,35 @@
-import brain from "../assets/images/brain.svg"
+import { useState } from "react";
+import Notifictation from "./Notification";
+
+interface props {
+  img: string;
+  title: string;
+  width: number;
+  index: number
+}
 
 
-export default function SkillCard() {
+export default function SkillCard({ img, title, width, index }: props) {
 
-  return <div className="backdrop-blur-xs shadow-md
-    shadow-emerald-950 rounded-md flex flex-col 
-    items-center w-50 min-h-50 hover:bg-accent
-    text-center px-2 text-neutral-100">
-    <img src={brain} width={150} />
-    <p>I think. (better than you)</p>
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+
+  const isEven = index % 2 === 0 
+
+  function notify() {
+    setIsOpen((prev) => !prev)
+
+    setTimeout(() => {
+      setIsOpen((prev) => !prev)
+    }, 3000)
+  }
+
+  return <> <div onClick={notify} className={`backdrop-blur-xs shadow-md
+    shadow-emerald-950 rounded-md flex flex-col ${width ? "gap-3" : ""}
+    items-center w-44 h-48 hover:bg-accent font-head-ar text-lg
+    text-center px-2 justify-center text-neutral-100 active:bg-accent `}>
+    <img src={img} width={width ? width : 110} className="" />
+    <p>{title}</p>
+    <Notifictation isOpen={isOpen} isEven={isEven} />
   </div>
+  </>
 }
