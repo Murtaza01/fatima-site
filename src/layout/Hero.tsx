@@ -25,7 +25,7 @@ function Hero() {
   }
 
   return <main id="home"
-    className=" mt-28 gap-2 h-74
+    className="mt-28 gap-2 h-74
     mx-2 backdrop-blur-xs rounded-md shadow-lg 
     shadow-emerald-950 flex  items-center 
     justify-around  sm:mx-5 md:w-[700px] md:mx-auto
@@ -43,7 +43,7 @@ function Hero() {
     </div>
     <div className="space-y-6  px-2
       flex flex-col  items-center 
-       h-20">
+       h-20 ">
       <button onClick={scrollToSection}>
         <a href="#skills" className="
         block px-2 py-0.5 w-36 sm:w-40 sm:py-1
@@ -59,8 +59,8 @@ function Hero() {
         ))}
       </span>
       {transition((style, item) => (item &&
-        <animated.p className="text-center absolute 
-          font-sub bottom-20 sm:bottom-12 sm:text-lg lg:text-xl"
+        <animated.p className=" text-center absolute 
+          font-sub bottom-15 sm:bottom-12 sm:text-lg lg:text-xl"
           style={style}>{msg}</animated.p>
       ))}
     </div>
