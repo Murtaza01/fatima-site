@@ -33,7 +33,7 @@ const books = [
   },
   {
     path: "books/kafka_shore",
-    extention: "webp"
+    extention: "jpg"
   },
 
 ]
