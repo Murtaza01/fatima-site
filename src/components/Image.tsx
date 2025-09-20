@@ -8,10 +8,9 @@ interface props {
 
 export default function Image({ path, extention, width, style }: props) {
 
-
   return <picture>
-    <source srcSet={`/images/${path}.avif`} type="image/avif" />
-    <img src={`/images/${path}.${extention}`} width={width ? width : 100}
+    <source srcSet={`${import.meta.env.BASE_URL}images/${path}.avif`} type="image/avif" />
+    <img src={`${import.meta.env.BASE_URL}images/${path}.${extention}`} width={width ? width : 100}
       className={style} />
   </picture>
 }

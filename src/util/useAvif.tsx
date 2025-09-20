@@ -6,16 +6,10 @@ export default function useAvif() {
 
   useEffect(() => {
     const avif = new Image()
-    avif.src = "/images/birdman.avif"
 
-    avif.onload = () => {
-      setSupportAvif(true)
-      console.log("support avif")
-    }
-    avif.onerror = () => {
-      setSupportAvif(false)
-      console.log("does not support avif")
-    }
+    avif.src = "/images/birdman.avif"
+    avif.onload = () => setSupportAvif(true)
+    avif.onerror = () => setSupportAvif(false)
   }, [])
 
   return supportAvif

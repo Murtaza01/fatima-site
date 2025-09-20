@@ -13,7 +13,7 @@ function App() {
 
 
   return <div className="text-white bg-emerald-900" style={{
-    backgroundImage: `url(/images/birds.png)`,
+    backgroundImage: `url(${import.meta.env.BASE_URL}images/birds.png)`,
     overflowAnchor: "none"
   }}>
     <Nav />

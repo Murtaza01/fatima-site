@@ -7,11 +7,11 @@ interface props {
   title: string;
   des: string;
   width: number;
-  extention:string;
+  extention: string;
 }
 
 
-export default function SkillCard({ path, title, width, des,extention }: props) {
+export default function SkillCard({ path, title, width, des, extention }: props) {
 
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
@@ -29,7 +29,7 @@ export default function SkillCard({ path, title, width, des,extention }: props) 
     items-center size-44 hover:bg-accent font-head-ar text-lg 
     text-center px-2 justify-center text-neutral-100 active:bg-accent
     md:size-52 md:text-xl md:gap-4 ">
-    <Image path={path} width={width} extention={extention}/>
+    <Image path={path} width={width} extention={extention} />
     <p >{title}</p>
     <Notifictation isOpen={isOpen}
       msg={des} />

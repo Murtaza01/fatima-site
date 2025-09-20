@@ -12,18 +12,3 @@ export function scrollToSection(event: React.SyntheticEvent, setOpen?:
   if (setOpen) setOpen((prev) => !prev)
 }
 
-
-export function checkAvif(setState){
-const avif = new Image()
-    avif.src = "data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAG1pZjFhdmlmAAAAAGF2M...";
-
-    avif.onload = () => {
-      setSupportAvif(true)
-      console.log("support avif")
-    }
-    avif.onerror = () => {
-      setSupportAvif(false)
-      console.log("does not support avif")
-    }
-
-}
