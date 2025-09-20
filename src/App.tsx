@@ -4,19 +4,30 @@ import Footer from "./layout/Footer"
 import Skills from "./layout/Skills"
 import Books from "./layout/Books"
 import Heading from "./components/Heading"
-import PaperSlider from "./components/PaperSlider"
+import Poems from "./layout/Poems"
+import Paintings from "./layout/Paintings"
+import "swiper/swiper-bundle.css"
+import About from "./layout/ِAbout"
 
 function App() {
 
-  return <div className="bg-hero text-white ">
+
+  return <div className="text-white bg-emerald-900" style={{
+    backgroundImage: `url(/images/birds.png)`,
+    overflowAnchor: "none"
+  }}>
     <Nav />
     <Hero />
     <Heading>أنه:</Heading>
     <Skills />
     <Heading>قصائدي</Heading>
-    <PaperSlider />
+    <Poems />
     <Heading>كتبي المفضلة</Heading>
     <Books />
+    <Heading> رسماتي</Heading>
+    <Paintings />
+    <Heading>عني</Heading>
+    <About />
     <Footer />
   </div>
 

@@ -1,10 +1,10 @@
-const poemStyle = "font-ar "
-const titleStyle = "text-lg font-ar flex justify-center "
+const poemStyle = "font-ar"
+const titleStyle = "text-lg font-head-ar text-center block"
 
 const poems = [
   {
-    title: <b className={titleStyle} > الليل الطويل</b>,
-    poem: <p className={`${poemStyle} long`}>
+    title: <b className={titleStyle} > الجو البارد</b>,
+    poem: <p className={`${poemStyle}`}>
       ليلٌ يقابل شمسه بسمائي <br />
       فهو البصيرُ وأنا الظلامُ ورائي <br />
       أمناً يسيرُ فكيفَ يفهمُ أننيْ <br />
@@ -32,8 +32,8 @@ const poems = [
   },
 
   {
-    title: <b className={titleStyle}> عتبه هويتي </b>,
-    poem: <p className={poemStyle}>
+    title: <b className={titleStyle}>ترك الدروع</b>,
+    poem: <p className={`${poemStyle} short`}>
       في الطريق لقدر تائه، <br />
       أسير بكامل تجردي  <br />
       تركت دروعي خلف باب بيتي المهجور <br />
@@ -55,8 +55,8 @@ const poems = [
     isShort: true
   },
   {
-    title: <b className={titleStyle}> عتبه هويتي </b>,
-    poem: <p className={`${poemStyle} long`}>
+    title: <b className={titleStyle}> عار الهوى</b>,
+    poem: <p className={`${poemStyle}`}>
       أنا في طريقي لكي أنال التسوية <br />
       اجتر ظلي باتجاه التجزية  <br />
       ألقيت منذ خرجت كامل كسوتي <br />
@@ -86,8 +86,8 @@ const poems = [
 
   },
   {
-    title: <b className={`${titleStyle} font-main  `}> Hello </b>,
-    poem: <p className={`${poemStyle} long`}>
+    title: <b className={`${titleStyle} font-main  `}> The illusion</b>,
+    poem: <p className={`${poemStyle} `}>
       I stroll patiently towards the daydream <br />
       I get the drink, I set the scene <br />
       And on one side of the bench, I sit <br />

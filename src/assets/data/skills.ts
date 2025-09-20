@@ -1,43 +1,61 @@
-import basarah from "../images/basarah.png"
-import reader from "../images/reader.png"
-import writer from "../images/writer.png"
-import poet from "../images/poet.png"
-import painter from "../images/painter.png"
-import college from "../images/college.png"
-
 const skills = [
   {
-    img: basarah,
-    title: "بصراوية ",
-    width: 130
+    path: "icons/basarah",
+    title: "بصراوية",
+    width: 130,
+    des: "معليكم بلصورة احب التين اكثر",
+    extention:"png"
   },
   {
-    img: writer,
-    title: "",
-    width:0
+    path: "icons/teacher",
+    title: "تدريسية",
+    width: 140,
+    des: "مقامي عالي (اعلى من الادارين)",
+    extention:"png"
   },
   {
-    img: poet,
-    title: "شاكرة السايبة",
-    width:0
-  },
-  {
-    img: painter,
-    title: "",
-    width:0
-  },
-  {
-    img: college,
+    path: "icons/college",
     title: "الاولى",
-    width: 130
+    width: 130,
+    des: "مرتين حتى متكولون حظ",
+    extention:"png"
+  },
+  {
+    path: "icons/writer",
+    title: "كاتبة",
+    width: 0,
+    des: "وذا مكاتبة اي شي؟ معليكم",
+    extention:"png"
+  },
+  {
+    path: "icons/poet",
+    title: "شاعرة",
+    width: 0,
+    des: "يسموني شاكرة السايبة",
+    extention:"png"
+  },
+  {
+    path: "icons/painter",
+    title: "رسامة",
+    width: 0,
+    des: "They call me fan cough",
+    extention:"png"
   },
 
   {
-    img: reader,
+    path: "icons/reader",
     title: "قارئة",
-    width: 140
+    width: 0,
+    des: "شلون تعرف انه مثقفة",
+    extention:"png"
   },
-
+  {
+    path: "icons/photographer",
+    title: "مصورة",
+    width: 90,
+    des: "You can say I have an eye.",
+    extention:"png"
+  },
 ]
 
 export default skills

@@ -1,7 +1,5 @@
 div.book {
   margin-top: 45px;
-  width: 160px;
-  height: 230px;
   color: black;
   background-color: transparent;
 }
@@ -15,6 +13,8 @@ div.book>div.book-inner {
   will-change: transform;
   transform-style: preserve-3d;
   box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.75);
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
   /*box-shadow: 1px -1px #3e3e3e, 2px -2px #fffae5, 3px -3px #d1ccb8, 4px -4px #fffae5, 5px -5px #d1ccb8, 6px -6px #fffae5, 7px -7px #d1ccb8, 8px -8px #3e3e3e;*/
 }
 
@@ -23,6 +23,8 @@ div.book>div.book-inner {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 div.book-inner>div.side {
@@ -44,6 +46,8 @@ div.book-inner>div.back {
   background-size: cover;
   transform: rotateY(180deg) translateZ(11px);
   background-image: url("../assets/images/book.jpg");
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
 }
 
 div.book-inner>div.front {

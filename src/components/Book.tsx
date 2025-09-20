@@ -1,18 +1,25 @@
-import "./books.css"
+import useAvif from "../util/useAvif";
+import "./book.css"
 
 interface props {
-
-  img: string
+  path: string;
+  extention: string;
 }
 
-export default function Book({ img }: props) {
+export default function Book({ path, extention }: props) {
+
+  const supportAvif = useAvif()
+
+  console.log(path)
+
+  const checkImg = supportAvif ? `${path}.avif` : `${path}.${extention}`
 
   return (
-    <div className="book">
+    <div className="book  w-40 h-58 sm:w-48 sm:h-70 lg:w-54 lg:h-80">
       <div className="book-inner">
-        <div className="front face" style={{ backgroundImage: `url(${img})` }}></div>
-        <div className="side" style={{ backgroundImage: `url(${img})` }}></div>
-        <div className="back face" style={{ backgroundImage: `url(${img})` }}></div>
+        <div className="front face" style={{ backgroundImage: `url(/images/${checkImg})` }}></div>
+        <div className="side" style={{ backgroundImage: `url(/images/${checkImg})` }}></div>
+        <div className="back face" style={{ backgroundImage: `url(/images/${checkImg})` }}></div>
       </div>
     </div>
   )

@@ -1,27 +1,27 @@
 interface props {
   isOpen: boolean;
-  isEven: boolean;
   msg: string;
 }
 
 import { animated, useTransition } from "@react-spring/web"
 
-export default function Notifictation({ isOpen, isEven, msg }: props) {
+export default function Notifictation({ isOpen, msg }: props) {
 
-  const isLeft = isEven ? "TranslateX(-20px)" : "TranslateX(20px)"
 
   const transition = useTransition(isOpen, {
-    from: { opacity: 0, transform: isLeft },
-    enter: { opacity: 1, transform: "translateX(0px)" },
-    leave: { opacity: 0, transform: isLeft },
-    config: { tension: 120, friction: 8 },
+    from: { opacity: 0, y: 25 },
+    enter: { opacity: 1, y: 0 },
+    leave: { opacity: 0, y: 25 },
+    config: { tension: 150, friction: 12 },
   })
 
   return <> {transition((style, item) => (item &&
-    <animated.div style={style} className={`absolute z-10 -top-10
-      ${isLeft === "TranslateX(20px)" ? "-right-[20%] rounded-l-full" : "-left-[20%] rounded-r-full"}
-      w-40 shadow-lg  bg-teal-900  p-2  font-ar`}>
-      <p>{msg}</p>
+    <animated.div style={style} className={`absolute
+-top-10 left-6 font-ar shadow-md z-10 `}>
+      <div id="speech-bubble" className="relative
+        w-40 bg-teal-800 rounded-lg px-2 py-1 ">
+        <p>{msg}</p>
+      </div>
     </animated.div>
 
   ))

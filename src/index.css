@@ -1,45 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Mirza:wght@400;500;600;700&family=Ruwudu:wght@400;500;600;700&family=Scheherazade+New:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Goudy+Bookletter+1911&family=Lancelot&family=Mate+SC&family=Mirza:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Ruwudu:wght@400;500;600;700&family=Scheherazade+New:wght@400;500;600;700&family=Sorts+Mill+Goudy:ital@0;1&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
 
 
 @theme {
-  --font-logo: "Charm", cursive;
-  --font-main: "Cormorant Garamond", serif;
+  --font-main: "Mate SC", serif;
+  --font-sub: "Sorts Mill Goudy", serif;
+  --font-par: "Goudy Bookletter 1911", serif;
   --font-ar: "Scheherazade New", serif;
   --font-head-ar: "Ruwudu", serif;
   --font-sub-ar: "Mirza", serif;
-  --color-accent: var(--color-rose-400)
+  --color-accent: var(--color-rose-500);
+  --color-sub-accent: var(--color-teal-500)
 }
 
 
-
-
-.bg-hero {
-  background-image: url(./assets/images/birds.png);
-  background-color: var(--color-emerald-900);
-}
-
-#paper:has(p.long)::after {
+#paper::after {
   content: "";
-  color: blue;
-  text-align: center;
   position: absolute;
-  bottom: 40px;
-  left: 10%;
-  width: 80%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: 30%;
-  background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255) 90%);
+  background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255) 85%);
 }
 
-.nav-animate {
-  transition: height 1s ease, opacity 0.5s ease;
-  height: 12rem;
-  opacity: 1;
-}
-
-@starting-style {
-  .nav-animate {
-    opacity: 0;
+@media only screen and (min-width:640px) {
+  #paper:has(p.short)::after {
+    content: "";
+    width: 0;
     height: 0;
   }
 }
+
+#speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top-color: var(--color-teal-800);
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -10px;
+  margin-bottom: -20px;
+}
+
+

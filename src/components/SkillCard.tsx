@@ -1,19 +1,20 @@
 import { useState } from "react";
 import Notifictation from "./Notification";
+import Image from "./Image";
 
 interface props {
-  img: string;
+  path: string;
   title: string;
+  des: string;
   width: number;
-  index: number
+  extention:string;
 }
 
 
-export default function SkillCard({ img, title, width, index }: props) {
+export default function SkillCard({ path, title, width, des,extention }: props) {
 
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
-  const isEven = index % 2 === 0 
 
   function notify() {
     setIsOpen((prev) => !prev)
@@ -23,13 +24,15 @@ export default function SkillCard({ img, title, width, index }: props) {
     }, 3000)
   }
 
-  return <> <div onClick={notify} className={`backdrop-blur-xs shadow-md
-    shadow-emerald-950 rounded-md flex flex-col ${width ? "gap-3" : ""}
-    items-center w-44 h-48 hover:bg-accent font-head-ar text-lg
-    text-center px-2 justify-center text-neutral-100 active:bg-accent `}>
-    <img src={img} width={width ? width : 110} className="" />
-    <p>{title}</p>
-    <Notifictation isOpen={isOpen} isEven={isEven} />
+  return <> <div onClick={notify} className="backdrop-blur-xs shadow-md 
+    shadow-emerald-950 rounded-md flex flex-col gap-2 hover:cursor-pointer
+    items-center size-44 hover:bg-accent font-head-ar text-lg 
+    text-center px-2 justify-center text-neutral-100 active:bg-accent
+    md:size-52 md:text-xl md:gap-4 ">
+    <Image path={path} width={width} extention={extention}/>
+    <p >{title}</p>
+    <Notifictation isOpen={isOpen}
+      msg={des} />
   </div>
   </>
 }
